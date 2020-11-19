@@ -16,6 +16,10 @@ class MusicsController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @music = Music.find(params[:id])
+  end
   
   private
 
