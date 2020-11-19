@@ -1,0 +1,28 @@
+<%= form_with model: @music, local: true do |f|%>
+
+<%= render "error_messages", model: f.object %>
+
+  <div class="field">
+    <%= f.label :image, "楽曲イメージ" %><br />
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= f.label :file, "音源ファイル" %><br />
+    <%= f.file_field :file %>
+  </div>
+
+  <div class="field">
+    <%= f.label :artist, "アーティスト名" %><br />
+    <%= f.text_area :artist, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title, "曲名" %><br />
+    <%= f.text_area :title, class: :form__text %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿する", class: :form__btn  %>
+  </div>
+<% end %>
