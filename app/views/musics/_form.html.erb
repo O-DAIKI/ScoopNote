@@ -1,0 +1,26 @@
+<%= form_with local: true do |f|%>
+
+  <div class="field">
+    <%= f.label :hoge, "楽曲イメージ" %><br />
+    <%= f.file_field :hoge %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hoge, "音源ファイル" %><br />
+    <%= f.file_field :hoge %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hoge, "アーティスト名" %><br />
+    <%= f.text_area :hoge, class: :form__text %>
+  </div>
+
+  <div class="field">
+    <%= f.label :hoge, "曲名" %><br />
+    <%= f.text_area :hoge, class: :form__text %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿する", class: :form__btn  %>
+  </div>
+<% end %>
