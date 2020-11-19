@@ -65,3 +65,5 @@ gem 'image_processing', '~>1.2'
 gem 'carrierwave'
 
 gem 'audiojs-rails'
+
+gem 'aws-sdk-s3', require: false
