@@ -33,6 +33,11 @@
   justify-content: center;
   padding-top: 16px;
 }
+
+.detail__artist{
+  margin-bottom: 15px;
+}
+
 .music__btn{
   display: block;
   padding: 0.4em 1.6em;

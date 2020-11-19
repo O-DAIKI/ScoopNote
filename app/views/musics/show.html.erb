@@ -20,10 +20,10 @@
           <p class="detail__artist">
             <%= @music.artist %>
           </p>
+          <audio src= "<%= "#{@music.file}" %>" controls="">
+         <a src="<%= "#{@music.file}" %>">ダウンロード</a>
+        </audio>
         </div>
-        <%# 以下に再生ボタンを設置 %>
-
-        <%# 以上に再生ボタンを設置 %>
       </div>
       <div class="music__comments">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
