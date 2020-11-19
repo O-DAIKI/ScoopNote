@@ -1,5 +1,5 @@
 <div class="card">
-  <%= link_to image_tag( music.image , class: :card__img ), root_path%>
+  <%= link_to image_tag( music.image , class: :card__img ), music_path(music)%>
   <div class="card__body">
     <%= link_to music.artist, root_path, class: :card__title%>
     <p class="card__summary">
