@@ -23,7 +23,7 @@ services:
     volumes:
       - ./tmp/db:/var/lib/mysql/data
     ports:
-      - "4306:3306"
+      - "3306:3306"
     environment:
       MYSQL_PASSWORD: password
       MYSQL_DATABASE: root
