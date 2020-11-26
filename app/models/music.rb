@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Music < ApplicationRecord
   belongs_to :user
   has_one_attached :image
@@ -9,5 +11,4 @@ class Music < ApplicationRecord
     validates :artist
     validates :title
   end
-  
 end

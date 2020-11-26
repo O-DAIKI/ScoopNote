@@ -1,9 +1,10 @@
-class MusicsController < ApplicationController
+# frozen_string_literal: true
 
+class MusicsController < ApplicationController
   def index
     @musics = Music.all
   end
-  
+
   def new
     @music = Music.new
   end
@@ -20,7 +21,7 @@ class MusicsController < ApplicationController
   def show
     @music = Music.find(params[:id])
   end
-  
+
   private
 
   def music_params
