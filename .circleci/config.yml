@@ -2,14 +2,14 @@ version: 2
 jobs:
   rubocop:
     docker:
-    - image: circleci/ruby:2.6.5-node-browsers-legacy
-      environment:
-        - BUNDLER_VERSION: 2.0.2
-        - RAILS_ENV: 'test'
-    - image: circleci/mysql:5.6
-      environment:
-        - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
-        - MYSQL_ROOT_HOST: '127.0.0.1'
+      - image: circleci/ruby:2.6.5-node-browsers-legacy
+        environment:
+          BUNDLER_VERSION: 2.0.2
+          RAILS_ENV: 'test'
+      - image: circleci/mysql:5.6
+        environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+          MYSQL_ROOT_HOST: '127.0.0.1'
 
     working_directory: ~/ScoopNote
 
@@ -36,13 +36,13 @@ jobs:
   rspec:
     docker:
       - image: circleci/ruby:2.6.5-node-browsers-legacy
-      environment:
-        - BUNDLER_VERSION: 2.0.2
-        - RAILS_ENV: 'test'
+        environment:
+          BUNDLER_VERSION: 2.0.2
+          RAILS_ENV: 'test'
       - image: circleci/mysql:5.6
-      environment:
-        - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
-        - MYSQL_ROOT_HOST: '127.0.0.1'
+        environment:
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+          MYSQL_ROOT_HOST: '127.0.0.1'
 
     working_directory: ~/ScoopNote
 
@@ -63,8 +63,8 @@ jobs:
        - run: bundle exec rake db:schema:load
        # Rspec
        - run:
-            name: Rspec
-            command: bundle exec rspec
+          name: Rspec
+          command: bundle exec rspec
 
 workflows:
   version: 2
