@@ -10,7 +10,7 @@ jobs:
         environment:
           RAILS_ENV: test
           BUNDLER_VERSION: 2.0.2
-      - image: circleci/myaql5.6
+      - image: circleci/myaql:5.6
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_ROOT_HOST: '127.0.0.1'
@@ -39,7 +39,7 @@ jobs:
         environment:
           RAILS_ENV: test
           BUNDLER_VERSION: 2.0.2
-      - image: circleci/mysql5.6
+      - image: circleci/mysql:5.6
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: true
           MYSQL_ROOT_HOST: '127.0.0.1'
