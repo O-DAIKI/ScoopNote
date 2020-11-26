@@ -1,7 +1,7 @@
 # 権限の設定
 sudo: required
 # Dockerを使う
-sercices: docker
+services: docker
 # コンテナを起動
 before_install:
   - docker-compose up --build -d
