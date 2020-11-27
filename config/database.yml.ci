@@ -6,4 +6,4 @@ test:
   port: 3306
   host: localhost
   database: ScoopNote_test
-  socket: /tmp/mysql.sock
+  socket: /var/lib/mysql/mysql.sock
