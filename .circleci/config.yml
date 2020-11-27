@@ -36,58 +36,44 @@ jobs:
 
   rspec:
     docker:
-      - image: circleci/ruby:2.6.5
-        environment:
-          RAILS_ENV: test
-          BUNDLER_VERSION: 2.1.4
-      - image: circleci/mysql:5.6
-        environment:
-          MYSQL_ALLOW_EMPTY_PASSWORD: true
-          MYSQL_ROOT_HOST: 'db'
-    working_directory: ~/ScoopNote
-    steps:
-      - checkout
-      - run:
-          name: Install Docker Compose
-          command: |
-            curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-            chmod +x ~/docker-compose
-            sudo mv ~/docker-compose /usr/local/bin/docker-compose
-      - run:
-          name: docker-compose up
-          command: |
-            set -x
-            docker-compose up --build -d
-      - run:
-          name: docker-compose stop
-          command: |
-            set -x
-            docker-compose stop
-      - run:
-          name: docker-compose up
-          command: |
-            set -x
-            docker-compose up -d
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "Gemfile.lock" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-      - run: gem install bundler:2.1.4
-      - run: bundle install --jobs=4 --retry=3 --path vendor/bundle
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-      - run: bundle exec rake db:create
-      - run: bundle exec rake db:schema:load
-      # Rspec
-      - run:
-          name: Rspec
-          command: bundle exec rspec
-      - run:
-          name: docker-compose down
-          command: docker-compose down
+      machine:
+      image: circleci/classic:edge
+      working_directory: ~/ScoopNote
+      steps:
+        - checkout
+        - run:
+            name: Install Docker Compose
+            command: |
+              curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
+              chmod +x ~/docker-compose
+              sudo mv ~/docker-compose /usr/local/bin/docker-compose
+        - run:
+            name: docker-compose up
+            command: |
+              set -x
+              docker-compose up --build -d
+        - run:
+            name: docker-compose stop
+            command: |
+              set -x
+              docker-compose stop
+        - run:
+            name: docker-compose up
+            command: |
+              set -x
+              docker-compose up -d
+        - run:
+            name: test
+            command: |
+              mkdir /tmp/test-results
+              TEST_FILES="$(circleci tests glob 'spec/**/*_spec.rb' | circleci tests split --split-by=timings)"
+              docker-compose exec rails_api bin/rspec --format progress \
+                                                                    --format RspecJunitFormatter \
+                                                                    --out /tmp/test-results/rspec.xml \
+                                                                    $TEST_FILES
+        - run:
+            name: docker-compose down
+            command: docker-compose down
 
 workflows:
   version: 2
