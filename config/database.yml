@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
+  host:
   database: ScoopNote_production
   username: root
   password: o28daikidb
