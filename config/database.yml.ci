@@ -3,7 +3,6 @@ test:
   encoding: utf8
   pool: 5
   username: root
-  password: o28daikidb
   port: 3306
   host: localhost
   database: ScoopNote_test
