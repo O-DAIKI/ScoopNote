@@ -4,5 +4,6 @@ test:
   pool: 5
   username: root
   port: 3306
-  host: localhost
+  host: 
+  password: o28daikidb
   database: ScoopNote_test
