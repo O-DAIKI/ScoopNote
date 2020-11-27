@@ -2,8 +2,8 @@ test:
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: 'root'
+  username: root
+  password: o28daikidb
   port: 3306
   host: localhost
   database: ScoopNote_test
-  socket: /tmp/mysql.sock
