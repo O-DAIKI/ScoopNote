@@ -55,5 +55,5 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-
+set :ssh_options, keys: "~/.ssh/scoopnote2020.pem"
 server "18.177.93.64", user: "ec2-user", roles: %w[app db web]
