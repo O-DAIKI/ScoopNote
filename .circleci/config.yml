@@ -17,7 +17,7 @@ jobs:
           - MYSQL_PASSWORD: ''
           - MYSQL_PORT: 3306
       # Mysqlのイメージを作成します。
-      - image: circleci/mysql:5.6.43
+      - image: circleci/mysql:5.6
         environment:
           - MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
           - MYSQL_ROOT_HOST: '%'
@@ -58,7 +58,6 @@ jobs:
             mkdir /tmp/test-results
             TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | \
               circleci tests split --split-by=timings)"
-           # ここでRspecJunitFormatterというgemをインストールしていないとエラーになります。
             bundle exec rspec \
               --format progress \
               --format RspecJunitFormatter \
