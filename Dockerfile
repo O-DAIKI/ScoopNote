@@ -4,8 +4,8 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && apt-get update -qq && apt-get install -y \
     build-essential \
     libpq-dev \
-    nodejs \
-    yarn
+    nodejs
+RUN apt-get install -y yarn
 WORKDIR /ScoopNote
 COPY Gemfile Gemfile.lock /ScoopNote/
 RUN gem install bundler:2.1.4
