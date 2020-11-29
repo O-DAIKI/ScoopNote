@@ -38,7 +38,14 @@ class MusicsController < ApplicationController
     end
   end
 
+  def destroy
+    music = Music.find(params[:id])
+    music.destroy
+    redirect_to root_path
+  end
+
   private
+  
     def music_params
       params.require(:music).permit(:image, :file, :artist, :title).merge(user_id: current_user.id)
     end

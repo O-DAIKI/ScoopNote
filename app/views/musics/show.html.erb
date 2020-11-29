@@ -8,7 +8,7 @@
       <% if user_signed_in? && current_user.id == @music.user_id %>
         <div class="music__manage">
           <%= link_to "編集する", edit_music_path(@music.id), class: :music__btn %>
-          <%= link_to "削除する", root_path, class: :music__btn %>
+          <%= link_to "削除する", music_path(@music.id), method: :delete, data: {confirm: "本当に削除しますか？"}, class: :music__btn %>
         </div>
       <% end %>
       <div class="music__image">
