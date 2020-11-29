@@ -22,6 +22,22 @@ class MusicsController < ApplicationController
     @music = Music.find(params[:id])
   end
 
+  def edit
+    @music = Music.find(params[:id])
+    unless user_signed_in? && current_user.id == @music.user.id
+      redirect_to action: :index
+    end
+  end
+
+  def update
+    @music = Music.find(params[:id])
+    if @music.update(music_params)
+      redirect_to music_path(@music.id)
+    else
+      render :edit
+    end
+  end
+
   private
     def music_params
       params.require(:music).permit(:image, :file, :artist, :title).merge(user_id: current_user.id)
