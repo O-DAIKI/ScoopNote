@@ -3,6 +3,7 @@
 class Music < ApplicationRecord
   belongs_to :user
   has_one_attached :image
+  has_many :favorites, dependent: :destroy
 
   mount_uploader :file, AudiofileUploader
 
@@ -10,5 +11,9 @@ class Music < ApplicationRecord
     validates :file
     validates :artist
     validates :title
+  end
+
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
   end
 end

@@ -16,10 +16,6 @@
             <td class="table__col2"><%= @user.profile %></td>
           </tr>
           <tr>
-            <th class="table__col1">お気に入り</th>
-            <td class="table__col2"><%= "お気に入りリスト" %></td>
-          </tr>
-          <tr>
             <th class="table__col1">フレンド</th>
             <td class="table__col2"><%= "フレンドリスト" %></td>
           </tr>
@@ -30,6 +26,12 @@
       </h2>
       <div class="user__card">
         <%= render partial: "musics/music", collection: @musics %>
+      </div>
+      <h2 class="page-heading">
+        <%= "#{@user.nickname}さんのお気に入り"%>
+      </h2>
+      <div class="user__card">
+        <%= render partial: "favorites" %>
       </div>
     </div>
   </div>

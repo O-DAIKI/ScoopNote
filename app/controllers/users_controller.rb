@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @musics = @user.musics
+    @favorite_musics = @user.favorite_musics
   end
 
   def edit

@@ -7,6 +7,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :musics
+  has_many :favorites, dependent: :destroy
+  has_many :favorite_musics, through: :favorites, source: :music
 
   validates :nickname, presence: true
 end
