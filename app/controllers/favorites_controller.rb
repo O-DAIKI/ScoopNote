@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class FavoritesController < ApplicationController
   before_action :set_music
   before_action :authenticate_user!
@@ -14,7 +16,7 @@ class FavoritesController < ApplicationController
   end
 
   private
-  def set_music
-    @music = Music.find(params[:music_id])
-  end
+    def set_music
+      @music = Music.find(params[:music_id])
+    end
 end
