@@ -4,13 +4,18 @@
       <p class="music__hedding">
         <%= @music.title %>
       </p>
-      <%= link_to "by #{@music.user.nickname}", root_path, class: :music__user %>
-      <% if user_signed_in? && current_user.id == @music.user_id %>
-        <div class="music__manage">
+      <%= link_to "by #{@music.user.nickname}", user_path(@music.user_id), class: :music__user %>
+      <div class="music__manage">
+        <% if user_signed_in? && current_user.id == @music.user_id %>
           <%= link_to "編集する", edit_music_path(@music.id), class: :music__btn %>
           <%= link_to "削除する", music_path(@music.id), method: :delete, data: {confirm: "本当に削除しますか？"}, class: :music__btn %>
-        </div>
-      <% end %>
+          <%= render 'favorites/favorite', music: @music %>
+        <% elsif user_signed_in? %>
+          <%= render 'favorites/favorite', music: @music %>
+        <% else %>
+          <p><span class="favorite__btn_stan">お気に入り数: <%= @music.favorites.count %></span></p>
+        <% end %>
+      </div>
       <div class="music__image">
         <%= image_tag @music.image %>
       </div>
