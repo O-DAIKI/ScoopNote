@@ -6,5 +6,9 @@ Rails.application.routes.draw do
   resources :musics do
     resource :favorites, only: [:create, :destroy]
   end
-  resources :users, only: [:show, :edit, :update, :favorite]
+  resources :users, only: [:show, :edit, :update, :favorite] do
+    resource :relationships, only: [:create, :destroy]
+    get :follows, on: :member
+    get :followers, on: :member
+  end
 end

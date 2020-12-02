@@ -1,26 +1,35 @@
 <div class="main">
   <div class="inner">
     <div class="user__wrapper">
-      <h2 class="page-heading">
-        <%= "#{@user.nickname}さんの情報"%>
-        <%= link_to "編集する", edit_user_path(current_user.id), class: :nav__btn %>
-      </h2>
-      <table class="table">
-        <tbody>
-          <tr>
-            <th class="table__col1">名前</th>
-            <td class="table__col2"><%= @user.nickname %></td>
-          </tr>
-          <tr>
-            <th class="table__col1">プロフィール</th>
-            <td class="table__col2"><%= @user.profile %></td>
-          </tr>
-          <tr>
-            <th class="table__col1">フレンド</th>
-            <td class="table__col2"><%= "フレンドリスト" %></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="prof__card">
+      <div class="prof__top">
+        <% if @user.image.attached?%>
+          <%= image_tag @user.image, class: :avt__card %>
+        <% else %>
+          <%= image_tag "no_image_square.jpg", class: :avt__card%>
+        <% end %>
+        <h1 class="user_name">
+          <%= @user.nickname %>
+        </h1>
+        <% if current_user == @user %>
+        <%= link_to "編集する", edit_user_path(current_user.id), class: :edit__btn %>
+        <% end %>
+      </div>
+      <div class="follow_label">
+        <%=link_to "フォローリスト", follows_user_path(@user.id), class: :follow__btn %>
+        <%=link_to "フォロワー", followers_user_path(@user.id), class: :follow__btn %>
+        <% if user_signed_in? && current_user != @user %>
+          <% if @user.followed_by?(current_user) %>
+            <%=link_to "フォロー解除", user_relationships_path(@user.id), method: :delete, class: :follow__btn %>
+          <% else %>
+            <%=link_to "フォローする", user_relationships_path(@user.id), method: :post, class: :follow__btn %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="prof__bottom">
+        <%= @user.profile %>
+      </div>
+    </div>
       <h2 class="page-heading">
         <%= "#{@user.nickname}さんの投稿"%>
       </h2>

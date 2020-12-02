@@ -10,6 +10,11 @@
         </div>
 
         <div class="field">
+          <%= f.label :image, "プロフィール画像" %><br />
+          <%= f.file_field :image %>
+        </div>
+
+        <div class="field">
           <%= f.label :profile, "プロフィール" %><br />
           <%= f.text_area :profile, class: :form__text %>
         </div>
