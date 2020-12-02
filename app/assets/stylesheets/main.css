@@ -17,10 +17,15 @@
 }
 .card {
   width: calc((100% - 50px) / 3);
+  padding: 12px;
   margin-bottom: 40px;
+  border: 5px solid#87CEFA;
+  border-radius: 16px;
 }
+
 .card__img {
   margin-bottom: 16px;
+  border-radius: 16px;
 }
 .card__title {
   display: block;
