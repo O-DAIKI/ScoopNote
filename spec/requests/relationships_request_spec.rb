@@ -1,7 +1,8 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 RSpec.describe "Relationships", type: :request do
-
   describe "GET /create" do
     it "returns http success" do
       get "/relationships/create"
@@ -15,5 +16,4 @@ RSpec.describe "Relationships", type: :request do
       expect(response).to have_http_status(:success)
     end
   end
-
 end
