@@ -1,0 +1,25 @@
+.link_box {
+  display: inline-block;
+  border: 1px #999 solid;
+  border-radius: 12px;
+  width: calc((100% - 100px) / 2);
+  margin: 0 20px 20px 12px;
+  padding: 12px;
+  position: relative;
+}
+
+.fol_name{
+  display: inline-block;
+  align-items: center;
+  position: absolute;
+  margin-left: 12px;
+  margin-top: 10px;
+}
+
+.link_box:hover {
+  border: 3px #87CEFA solid;
+}
+
+.follow_list {
+  margin: 0 0 40px 30px;
+}
