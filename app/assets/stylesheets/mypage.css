@@ -1,4 +1,5 @@
 .user__wrapper{
+  margin-top: 48px;
   min-height: calc(100vh - 161px);
 }
 .table{
@@ -27,4 +28,26 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+}
+
+.page-heading {
+  margin-top: 48px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.dots {
+  border-width: 0 0 8px;
+  border-style: solid;
+  border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 1"><circle fill="hsla(0, 0%, 65%, 1.0)" cx="1" cy="0.5" r="0.5"/></svg>') 0 0 100% repeat;
+  width: 216px;
+  margin-bottom: 38px;
+}
+
+.dots2 {
+  border-width: 0 0 8px;
+  border-style: solid;
+  border-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 1"><circle fill="hsla(0, 0%, 65%, 1.0)" cx="1" cy="0.5" r="0.5"/></svg>') 0 0 100% repeat;
+  width: 280px;
+  margin-bottom: 38px;
 }

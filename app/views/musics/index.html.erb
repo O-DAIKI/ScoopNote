@@ -1,11 +1,26 @@
+<div class="index_header">
+  <div class="bg-mask">
+    <div class="head_message">
+      <h1>楽曲を投稿してみよう！</h1>
+    </div>
+    <div class="easy_login">
+      <% if user_signed_in? %>
+        <h2><%= "こんにちは、#{current_user.nickname}さん。"%></h2>
+        <div class="actions">
+            <%= link_to "投稿する", new_music_path, class: :easy__btn %>
+        </div>
+      <% else %>
+        <h2>ゲストユーザーはこちらから</h2>
+        <div class="actions">
+            <%= link_to "かんたんログイン", users_guest_sign_in_path, method: :post, class: :easy__btn  %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 <main class="main">
   <div class="inner">
-    <%if user_signed_in? %>
-      <div class="greeting">
-        <%= "こんにちは、" %>
-        <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: :greeting__link%>
-      </div>
-    <% end %>
+    <h1 class="music_column">ー 投稿一覧 ー</h1>
     <div class="card__wrapper">
       <%= render partial: 'music', collection: @musics %>
     </div>
