@@ -1,8 +1,4 @@
-.index_header {
-  height: 400px;
-  background-image: url("index_image");
-  background-size: cover;
-}
+
 .bg-mask {
   height: 100%;
   background: rgba(255,255,255,0.4);
