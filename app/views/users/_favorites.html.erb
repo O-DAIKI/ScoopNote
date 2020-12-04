@@ -1,5 +1,4 @@
 <div class="card">
-  <% @favorite_musics.each do |music| %>
   <%= link_to image_tag( music.image , class: :card__img ), music_path(music)%>
   <div class="card__body">
     <%= link_to music.artist, root_path, class: :card__title%>
@@ -8,5 +7,4 @@
     </p>
     <%= link_to "by #{music.user.nickname}", user_path(music.user_id), class: :card__user %>
   </div>
-  <% end %>
 </div>

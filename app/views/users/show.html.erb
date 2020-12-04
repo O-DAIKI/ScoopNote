@@ -33,14 +33,18 @@
       <h2 class="page-heading">
         <%= "#{@user.nickname}さんの投稿"%>
       </h2>
+      <hr class="dots">
       <div class="user__card">
         <%= render partial: "musics/music", collection: @musics %>
       </div>
       <h2 class="page-heading">
         <%= "#{@user.nickname}さんのお気に入り"%>
       </h2>
+      <hr class="dots2">
       <div class="user__card">
-        <%= render partial: "favorites" %>
+        <% @favorite_musics.each do |music| %>
+          <%= render partial: "favorites", locals: { music: music } %>
+        <% end %>
       </div>
     </div>
   </div>

@@ -1,7 +1,6 @@
 .form__wrapper{
   width: 980px;
-  margin: 0 auto;
-  margin-bottom: 48px;
+  margin: 48px auto;
   padding: 60px;
   background-color: #fff;
   border: 1px solid #ddd;
