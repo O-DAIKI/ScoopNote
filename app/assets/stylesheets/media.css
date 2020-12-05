@@ -14,12 +14,6 @@
   .form__wrapper{
     width: 90%;
   }
-  .nav__btn{
-    padding: 0.4em 1.0em;
-  }
-  .nav__logout{
-    padding: 0.4em 1.0em;
-  }
   .link_box {
     display: block;
     width: calc(100% - 100px);
@@ -53,12 +47,6 @@
   }
   .form__wrapper{
     width: 90%;
-  }
-  .nav__btn{
-    padding: 0.4em 0.6em;
-  }
-  .nav__logout{
-    padding: 0.4em 0.6em;
   }
   .link_box {
     display: block;
