@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :set_user, except: :update
+  before_action :set_user, except: [:update, :search]
 
   def show
     @musics = @user.musics
@@ -28,6 +28,10 @@ class UsersController < ApplicationController
 
   def followers
     @users = @user.followers
+  end
+
+  def search
+    @users = User.search(params[:keyword])
   end
 
   private
