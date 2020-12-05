@@ -29,7 +29,7 @@ class Music < ApplicationRecord
 
   def default_image
     if !self.image.attached?
-      self.image.attach(io: File.open(Rails.root.join('app', 'assets', 'images', 'l_e_others_501.png')), filename: 'default-image.png', content_type: 'image/png')
+      self.image.attach(io: File.open(Rails.root.join("app", "assets", "images", "l_e_others_501.png")), filename: "default-image.png", content_type: "image/png")
     end
   end
 end
