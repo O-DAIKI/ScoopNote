@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="inner">
+    <%= form_with(url: search_musics_path, local: true, method: :get, class: "search-form") do |form| %>
+      <%= form.text_field :keyword, placeholder: "楽曲検索", class: "search-input" %>
+      <%= form.submit "検索", class: "search-btn" %>
+    <% end %>
+    <h1 class="search-message">- 検索結果 -</h1>
+    <div class="card__wrapper">
+      <%= render partial: 'music', collection: @musics %>
+    </div>
+  </div>
+</div>

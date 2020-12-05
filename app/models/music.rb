@@ -16,4 +16,12 @@ class Music < ApplicationRecord
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
   end
+
+  def self.search(search)
+    if search != ""
+      Music.where("title LIKE(?)", "%#{search}%")
+    else
+      Music.all
+    end
+  end
 end
