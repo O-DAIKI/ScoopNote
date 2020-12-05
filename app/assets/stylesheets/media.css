@@ -20,6 +20,10 @@
   .nav__logout{
     padding: 0.4em 1.0em;
   }
+  .link_box {
+    display: block;
+    width: calc(100% - 100px);
+  }
 }
 
  /* スマホ表示 */
@@ -51,5 +55,9 @@
   }
   .nav__logout{
     padding: 0.4em 0.6em;
+  }
+  .link_box {
+    display: block;
+    width: calc(100% - 100px);
   }
 }
