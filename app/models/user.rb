@@ -28,4 +28,12 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
     end
   end
+
+  def self.search(search)
+    if search != ""
+      User.where('nickname LIKE(?)', "%#{search}%")
+    else
+      User.all
+    end
+  end
 end
