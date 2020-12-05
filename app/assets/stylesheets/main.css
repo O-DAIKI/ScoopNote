@@ -40,6 +40,8 @@
 .card__img {
   margin-bottom: 16px;
   border-radius: 16px;
+  width: 350px;
+  height: 233px;
 }
 .card__title {
   display: block;

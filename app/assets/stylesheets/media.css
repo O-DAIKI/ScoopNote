@@ -24,6 +24,10 @@
     display: block;
     width: calc(100% - 100px);
   }
+  .card__img {
+    width: 400px;
+    height: 266px;
+  }
 }
 
  /* スマホ表示 */
@@ -59,5 +63,9 @@
   .link_box {
     display: block;
     width: calc(100% - 100px);
+  }
+  .card__img {
+    width: 420px;
+    height: 280px;
   }
 }
