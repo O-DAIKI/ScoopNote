@@ -1,6 +1,6 @@
 .user__wrapper{
-  margin-top: 48px;
   min-height: calc(100vh - 161px);
+  padding-top: 48px;
 }
 .table{
   border-collapse: collapse;
