@@ -3,11 +3,7 @@
     <div class="user__wrapper">
     <div class="prof__card">
       <div class="prof__top">
-        <% if @user.image.attached?%>
-          <%= image_tag @user.image, class: :avt__card %>
-        <% else %>
-          <%= image_tag "no_image_square.jpg", class: :avt__card%>
-        <% end %>
+        <%= image_tag @user.image, class: :avt__card %>
         <h1 class="user_name">
           <%= @user.nickname %>
         </h1>

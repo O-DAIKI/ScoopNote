@@ -5,9 +5,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  
+  before_create :default_image
 
   has_many :musics
   has_one_attached :image
+  has_many :comments
   has_many :favorites, dependent: :destroy
   has_many :favorite_musics, through: :favorites, source: :music
 
@@ -34,6 +37,12 @@ class User < ApplicationRecord
       User.where("nickname LIKE(?)", "%#{search}%")
     else
       User.all
+    end
+  end
+
+  def default_image
+    if !self.image.attached?
+      self.image.attach(io: File.open(Rails.root.join("app", "assets", "images", "l_e_others_501.png")), filename: "default-image.png", content_type: "image/png")
     end
   end
 end

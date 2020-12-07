@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   root to: "musics#index"
   resources :musics do
     resource :favorites, only: [:create, :destroy]
+    resources :comments, only: [:create]
     collection do
       get "search"
     end

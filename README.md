@@ -152,6 +152,7 @@
 ### Association
 
 - has_many :musics
+- has_many :comments
 - has_many :favorites
 - has_many :favorite_musics, through: :favorites, source: :music
 - has_many :active_relationships, class_name: "Relationship", foreign_key: :following_id
@@ -171,6 +172,7 @@
 
 - belongs_to :user
 - has_many :favorites
+- has_many :comments
 
 ## favorites テーブル
 
@@ -195,6 +197,19 @@
 
 - belongs_to :following, Class_name: "User"
 - belongs_to :follower, Class_name: "User"
+
+## comments テーブル
+
+| Column   | Type       | Option                         |
+| -------- | ---------- | ------------------------------ |
+| text     | text       | null: false                    |
+| user_id  | references | null: false, foreign_key: true |
+| music_id | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :music
 
 ## ER図
 
