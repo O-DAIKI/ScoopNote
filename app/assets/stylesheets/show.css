@@ -56,27 +56,6 @@
   background: #999;
 }
 
-.music__comments{
-  background-color: #f6f6f6;
-  padding: 20px;
-  margin: 28px 0 40px 0;
-}
-
-.comments_lists{
-  padding-left: 20px;
-}
-
-.comments_list{
-  list-style-type: square;
-  padding-bottom: 5px;
-}
-
-.comment_user{
-  font-size: 16px;
-  color: #999;
-  text-decoration: underline;
-}
-
 .favorite__btn{
   display: block;
   padding: 0.4em 1.6em;
@@ -107,4 +86,50 @@
   border-radius: 3px;
   transition: 0.4s ease;
   margin: 0 4px;
+}
+
+.comment_form {
+  margin-bottom: 32px;
+  padding-left: 20px;
+}
+
+.comment_body {
+  height: 24px;
+  width: 40%;
+}
+
+.comments_lists{
+  padding-left: 20px;
+}
+
+.comments_list {
+  background-color: #fff;
+  border: 1px #999 solid;
+  border-radius: 10px;
+  padding: 12px 12px;
+  margin-bottom: 12px;
+}
+
+.com_top {
+  display: flex;
+  align-items: center;
+}
+
+.comment_user{
+  font-size: 16px;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.com_bottom {
+  margin-top: 8px;
+  word-wrap: break-word;
+}
+
+.music__comments{
+  background-color: #f6f6f6;
+  border: 3px #87CEFA solid;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 28px 0 40px 0;
 }

@@ -20,6 +20,8 @@ class MusicsController < ApplicationController
 
   def show
     @music = Music.find(params[:id])
+    @comment = Comment.new
+    @comments = @music.comments.includes(:user)
   end
 
   def edit

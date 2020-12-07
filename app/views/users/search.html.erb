@@ -9,12 +9,8 @@
         <% @users.each do |user| %>
           <%= link_to(user_path(user), class: :fol_card) do %>
             <div class="link_box">
-                <% if user.image.attached?%>
-                  <%= image_tag user.image, class: :avt__card %>
-                <% else %>
-                  <%= image_tag "no_image_square.jpg", class: :avt__card %>
-                <% end %>
-                <h2 class="fol_name"><%= user.nickname %></h2>
+              <%= image_tag user.image, class: :avt__card %>
+              <h2 class="fol_name"><%= user.nickname %></h2>
                 <%# <% if current_user != user %>
                     <%# <% if user.followed_by?(current_user) %>
                     <%# <p><%=link_to "フォロー済み", user_relationships_path(user.id), method: :delete %></p>
