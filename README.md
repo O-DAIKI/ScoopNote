@@ -1,17 +1,17 @@
 # _ScoopNote_
 
+## URL
+[ScoopNote](http://18.177.93.64/)(http://18.177.93.64/)
+
 ## アプリケーション概要
+「Note(音)」を「Scoop(掬う)」アプリです。
 * 簡単に作成した楽曲データの公開ができます。
 * 気に入った楽曲を保存できます。
-* フレンドと楽曲の共有ができます。
+* 友人間での楽曲の共有ができます。
 
-# URL
+## 開発環境
 
-# テスト用アカウント
-
-* nickname: O-DAIKI
-* email: o-daiki@gmail.com
-* password: od1234
+![ScoopNoteアーキテクチャ](https://user-images.githubusercontent.com/72906009/101499856-19379600-39b1-11eb-8e8a-22c193938d61.png)
 
 # 利用方法
 
