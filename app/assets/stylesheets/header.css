@@ -1,4 +1,7 @@
 .header {
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
   background-color: #0099FF;
   padding: 20px 0;
 }
