@@ -1,6 +1,12 @@
+.form__top {
+  padding-top: 123px;
+  height: 100vh;
+  margin-bottom: 123px;
+}
+
 .form__wrapper{
   width: 980px;
-  margin: 48px auto;
+  margin: 0 auto;
   padding: 60px;
   background-color: #fff;
   border: 1px solid #ddd;

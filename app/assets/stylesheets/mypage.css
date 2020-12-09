@@ -1,6 +1,7 @@
 .user__wrapper{
   min-height: calc(100vh - 161px);
-  padding-top: 48px;
+  padding-top: 123px;
+  height: 100vh;
 }
 
 .user__card {
