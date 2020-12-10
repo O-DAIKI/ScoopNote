@@ -24,7 +24,22 @@
 
 # DEMO
 
+[![Image from Gyazo](https://i.gyazo.com/f781dcad25945f956b44aec871e5e56c.gif)](https://gyazo.com/f781dcad25945f956b44aec871e5e56c)
+
 [![Image from Gyazo](https://i.gyazo.com/1534abf5af7dc7d17535958fe653fac6.gif)](https://gyazo.com/1534abf5af7dc7d17535958fe653fac6)
+
+[![Image from Gyazo](https://i.gyazo.com/e1e403b185ac6dfaf51b37f3c4fa02ab.gif)](https://gyazo.com/e1e403b185ac6dfaf51b37f3c4fa02ab)
+
+## 工夫した点
+
+1. インフラ技術
+インフラの学習としてモダンな開発環境に触れたかったため、Docker、Circleci、AWS、Capistranoを用いてCI/CDパイプラインを構築しました。
+
+2. 使用感
+作曲を行っている知人に実際に触ってもらい意見を取り入れ、不便な箇所を改善していきました。
+
+3. 楽曲データの共有の容易さ
+相互フォローをした状態であれば、お互いのフォローリストから相手のマイページに飛ぶことができ、そこで投稿楽曲の一覧を表示することで楽曲の共有を楽に行えるよう実装しました。
 
 # 実装機能
 
@@ -100,7 +115,16 @@
 * 詳細:  
 文字列検索により、入力した文字列を含むユーザーを一覧表示します。
 
-## 開発環境
+# 使用技術
+
+* Ruby : 2.6.5
+* Rails : 6.0.0
+* webpacker
+* Docker (ローカル環境)
+* Circleci (自動テスト、rubocop、自動デプロイ)
+
+
+# 開発環境
 
 ![ScoopNoteアーキテクチャ](https://user-images.githubusercontent.com/72906009/101499856-19379600-39b1-11eb-8e8a-22c193938d61.png)
 
@@ -179,4 +203,4 @@
 
 ## ER図
 
-![ER図 drawio](https://user-images.githubusercontent.com/72906009/99501633-5e266900-29bf-11eb-892a-29fa02d5e6eb.png)
+![ER図 copy drawio](https://user-images.githubusercontent.com/72906009/101788185-2dab9800-3b43-11eb-97c6-88b5b1c537d6.png)

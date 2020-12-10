@@ -1,6 +1,6 @@
-<mxfile host="65bd71144e" modified="2020-12-06T13:56:54.894Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.49.3 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="_8njhUXvrOU5gKH3Hibq" version="13.10.0" type="embed">
+<mxfile host="65bd71144e" modified="2020-12-10T14:52:28.693Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.49.3 Chrome/83.0.4103.122 Electron/9.2.1 Safari/537.36" etag="FlXXDWPDDgtneJR4_6_P" version="13.10.0" type="embed">
     <diagram id="g7uPGAQq0g1bsHjRyJx0" name="ページ1">
-        <mxGraphModel dx="968" dy="1954" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="126" dy="1695" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -160,7 +160,7 @@
                 <mxCell id="37" value="comments" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;" vertex="1" parent="1">
                     <mxGeometry x="570" y="-160" width="310" height="116" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="・text ( text型 )" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="37">
+                <mxCell id="38" value="・text ( text型 , null: false)" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" vertex="1" parent="37">
                     <mxGeometry y="26" width="310" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="50" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="37">
