@@ -5,7 +5,7 @@ require "rails_helper"
 RSpec.describe User, type: :model do
   before do
     @user = FactoryBot.build(:user)
-    @user.image = fixture_file_upload('app/assets/images/no_image_square.jpg')
+    @user.image = fixture_file_upload("app/assets/images/no_image_square.jpg")
   end
 
   describe "ユーザー新規登録" do

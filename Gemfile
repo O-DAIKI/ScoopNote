@@ -46,7 +46,7 @@ group :development, :test do
   gem "rubocop-performance"
   gem "rubocop-packaging"
   gem "rspec_junit_formatter"
-  gem 'faker'
+  gem "faker"
 end
 
 group :development do
