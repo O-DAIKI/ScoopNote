@@ -2,8 +2,6 @@
 
 ![02c35bdee918a5bfed82781f06c49631](https://user-images.githubusercontent.com/72906009/101783191-4ca72b80-3b3d-11eb-8a6f-bc8f80f3816a.jpg)
 
-<img width="893" alt="39588f6a199ac7f8368dc144d181b2b7" src="https://user-images.githubusercontent.com/72906009/101783635-d8b95300-3b3d-11eb-89fa-d274666ffa80.png">
-
 ## URL
 [ScoopNote](http://18.177.93.64/)(http://18.177.93.64/)
 
@@ -23,6 +21,10 @@
 * 楽曲制作を行っている人が簡単にweb上に制作物を公開できるようにするため。
 * 楽曲の共有を容易にし、知人間の音源のやりとりを円滑に行えるようにするため。
 * モダンな開発技術に触れたかったため、Docker,Circleciといった技術を学習し導入しました。
+
+# DEMO
+
+[![Image from Gyazo](https://i.gyazo.com/1534abf5af7dc7d17535958fe653fac6.gif)](https://gyazo.com/1534abf5af7dc7d17535958fe653fac6)
 
 # 実装機能
 
