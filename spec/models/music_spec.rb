@@ -1,4 +1,6 @@
-require 'rails_helper'
+# frozen_string_literal: true
+
+require "rails_helper"
 
 RSpec.describe Music, type: :model do
   before do
@@ -7,7 +9,7 @@ RSpec.describe Music, type: :model do
     @music.file = fixture_file_upload("app/assets/musics/water solution.mp3")
   end
 
-  describe '楽曲の保存' do
+  describe "楽曲の保存" do
     context "楽曲が保存できる場合" do
       it "アーティスト名、曲名、音源データがあれば楽曲は保存される" do
         expect(@music).to be_valid
