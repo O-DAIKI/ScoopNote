@@ -122,6 +122,7 @@
 * webpacker
 * Docker (ローカル環境)
 * Circleci (自動テスト、rubocop、自動デプロイ)
+* Rspec (単体テストコード、結合テストコード)
 
 
 # 開発環境
