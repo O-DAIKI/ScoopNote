@@ -38,6 +38,7 @@ jobs:
           command: |
             gem install bundler -v 2.0.2
             bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - run: yarn install
       # bundle installのデータをキャッシュします。
       - save_cache:
           paths:
@@ -47,7 +48,7 @@ jobs:
       - run: mv config/database.yml.ci config/database.yml
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
-      # ここでようやくRuboCopを走らせます。
+      # RuboCopを走らせます。
       - run:
           name: RuboCop
           command: bundle exec rubocop
