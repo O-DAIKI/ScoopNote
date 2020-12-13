@@ -18,6 +18,7 @@
 
 .link_box:hover {
   border: 3px #87CEFA solid;
+  margin: -2px 20px 18px 12px;
 }
 
 .follow_list {
