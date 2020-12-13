@@ -2,7 +2,7 @@
 
 class MusicsController < ApplicationController
   def index
-    @musics = Music.all.order(created_at: :desc)
+    @musics = Music.includes(:user).order(created_at: :desc)
   end
 
   def new
