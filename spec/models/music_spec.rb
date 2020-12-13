@@ -15,7 +15,7 @@ RSpec.describe Music, type: :model do
         expect(@music).to be_valid
       end
       it "楽曲イメージがなくても楽曲は保存される" do
-        @music.image = ""
+        @music.image = nil
         expect(@music).to be_valid
       end
     end
