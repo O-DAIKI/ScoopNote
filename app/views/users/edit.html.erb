@@ -5,14 +5,15 @@
         <h2 class="page-heading">プロフィール編集</h2>
           <%= form_with model: current_user, local: true do |f| %>
 
-          <div class="field">
-            <%= f.label :nickname, "ユーザー名" %><br />
-            <%= f.text_field :nickname %>
-          </div>
-
+          <div class="image-list-user" id="image-list"></div>
           <div class="field">
             <%= f.label :image, "プロフィール画像" %><br />
             <%= f.file_field :image %>
+          </div>
+
+          <div class="field">
+            <%= f.label :nickname, "ユーザー名" %><br />
+            <%= f.text_field :nickname %>
           </div>
 
           <div class="field">
