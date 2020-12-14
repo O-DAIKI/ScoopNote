@@ -38,9 +38,13 @@
   text-align: center;
 }
 
+.search {
+  padding-top: 90px;
+}
+
 .search-form {
   text-align: center;
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 .search-form .search-input {

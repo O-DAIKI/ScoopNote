@@ -119,7 +119,7 @@
 
 * Ruby : 2.6.5
 * Rails : 6.0.0
-* webpacker
+* webpacker (css/javascript)
 * Docker (ローカル環境)
 * Circleci (自動テスト、rubocop、自動デプロイ)
 * Rspec (単体テストコード、結合テストコード)
