@@ -86,3 +86,5 @@ gem "audiojs-rails"
 gem "aws-sdk-s3", require: false
 
 gem "pry-rails"
+
+gem 'rails-i18n'

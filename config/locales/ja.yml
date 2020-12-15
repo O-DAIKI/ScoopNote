@@ -1,0 +1,11 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       nickname: ニックネーム
+       image: 画像
+     music:
+       artist: アーティスト名
+       title: 曲名
+       file: 音源データ
+       image: 画像
