@@ -87,4 +87,4 @@ gem "aws-sdk-s3", require: false
 
 gem "pry-rails"
 
-gem 'rails-i18n'
+gem "rails-i18n"
