@@ -24,22 +24,22 @@ RSpec.describe Music, type: :model do
       it "アーティスト名がないと楽曲は保存できない" do
         @music.artist = nil
         @music.valid?
-        expect(@music.errors.full_messages).to include("Artist can't be blank")
+        expect(@music.errors.full_messages).to include("アーティスト名を入力してください")
       end
       it "曲名がないと楽曲は保存できない" do
         @music.title = nil
         @music.valid?
-        expect(@music.errors.full_messages).to include("Title can't be blank")
+        expect(@music.errors.full_messages).to include("曲名を入力してください")
       end
       it "音源データがないと楽曲は保存できない" do
         @music.file = nil
         @music.valid?
-        expect(@music.errors.full_messages).to include("File can't be blank")
+        expect(@music.errors.full_messages).to include("音源データを入力してください")
       end
       it "ユーザーが紐付いていないと楽曲は保存できない" do
         @music.user = nil
         @music.valid?
-        expect(@music.errors.full_messages).to include("User must exist")
+        expect(@music.errors.full_messages).to include("Userを入力してください")
       end
     end
   end

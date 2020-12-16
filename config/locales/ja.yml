@@ -9,3 +9,5 @@ ja:
        title: 曲名
        file: 音源データ
        image: 画像
+     comment:
+       text: コメント文

@@ -33,6 +33,7 @@
       <div class="music__comments">
         <% if user_signed_in? %>
           <%= form_with(model: [@music, @comment], local: true, class: :comment_form) do |f| %>
+          <%= render "error_messages", model: f.object %>
             <div class="field">
               <%= f.label :text, "コメントする" %><br />
               <%= f.text_field :text, class: :comment_body %>
