@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class MusicsController < ApplicationController
+  before_action :set_music, except: [:index, :new, :create,]
+
   def index
     @musics = Music.includes(:user).order(created_at: :desc)
   end
@@ -19,20 +21,17 @@ class MusicsController < ApplicationController
   end
 
   def show
-    @music = Music.find(params[:id])
     @comment = Comment.new
     @comments = @music.comments.includes(:user)
   end
 
   def edit
-    @music = Music.find(params[:id])
     unless user_signed_in? && current_user.id == @music.user.id
       redirect_to action: :index
     end
   end
 
   def update
-    @music = Music.find(params[:id])
     if @music.update(music_params)
       redirect_to music_path(@music.id)
     else
@@ -41,8 +40,7 @@ class MusicsController < ApplicationController
   end
 
   def destroy
-    music = Music.find(params[:id])
-    music.destroy
+    @music.destroy
     redirect_to root_path
   end
 
@@ -53,5 +51,9 @@ class MusicsController < ApplicationController
   private
     def music_params
       params.require(:music).permit(:image, :file, :artist, :title).merge(user_id: current_user.id)
+    end
+
+    def set_music
+      @music = Music.find(params[:id])
     end
 end
