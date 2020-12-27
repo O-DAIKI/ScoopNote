@@ -5,6 +5,13 @@
         <h2 class="page-heading">ユーザー新規登録</h2>
           <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
+          <div class="image-list-user" id="image-list"></div>
+
+          <div class="field">
+            <%= f.label :image, "プロフィール画像 (任意)" %><br />
+            <%= f.file_field :image %>
+          </div>
+
           <div class="field">
             <%= f.label :nickname, "ユーザー名" %><br />
             <%= f.text_field :nickname %>
@@ -23,11 +30,6 @@
           <div class="field">
             <%= f.label :password_confirmation, "パスワード再入力" %><br />
             <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-          </div>
-
-          <div class="field">
-            <%= f.label :image, "プロフィール画像 (任意)" %><br />
-            <%= f.file_field :image %>
           </div>
 
           <div class="field">
